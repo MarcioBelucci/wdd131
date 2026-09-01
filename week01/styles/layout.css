@@ -19,19 +19,23 @@ h2 {
     padding-left: 10px;
 }
 
-.navbar {
+nav {
     color: white;
     background-color: black;
-    height: 50px;
+
 }
 
-.navbar ul {
+ul {
     display: flex;
     list-style: none;
-    font-size: 18px;
-    gap: 12em;
+    font-size: 20px;
+    gap: 15em;
     padding: 0 auto;
+    margin: 0 auto;
     justify-content: center;
+    height: 50px;
+    align-items: center;
+
 }
 
 main {
