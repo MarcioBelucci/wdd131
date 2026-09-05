@@ -9,14 +9,15 @@
     margin: 0 auto;
     text-align: center;
     padding-top: 15px;
-    width: 800px;
-    height: 50px;
-    background-color: rgb(135, 135, 250);
+    width: auto;
+    height: 75px;
+    color: white;
+    background-color: #1a4971;;
 }
 
 nav {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: auto;
     background-color: black;
 }
 
@@ -48,7 +49,7 @@ main {
     grid-template-rows: 50px auto;
     grid-template-columns: 2fr 1fr;
     gap: 1rem; 
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -89,4 +90,27 @@ h1 {
     margin: 0;
     text-align: center;
     padding-right: 200px;
+}
+
+.card ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 40px;
+
+}
+
+footer {
+    background-color: #1a4971;
+    font-size: 20px;
+    padding: 0 10px;
+    min-height: 100px;
+}
+
+#currentyear {
+
+}
+
+#lastModified {
+
 }
