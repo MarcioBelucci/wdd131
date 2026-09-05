@@ -2,19 +2,24 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+header {
+    background-color: #1a4971;
+    font-size: 20px;
+    margin: 0 auto;
 }
 
 #course-title {
     display: block;
-    margin: 0 auto;
     text-align: center;
     padding: 15px;
     width: auto;
     height: auto;
     color: white;
     font-size: 1.5rem;
-    background-color: #1a4971;;
+    background-color: #1a4971;
 }
 
 nav {
@@ -119,12 +124,12 @@ figure {
 
 footer {
     display: flex;
-    flex-direction: column;     /* Empilha as linhas uma embaixo da outra */
-    align-items: center;        /* Centraliza na horizontal */
-    justify-content: center;   /* Centraliza na vertical */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     background-color: #1a4971;
-    font-size: 1.2rem;          /* Tamanho proporcional e responsivo */
+    font-size: 1.2rem;
     padding: 1rem;
     color: white;
 }
