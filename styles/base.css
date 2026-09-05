@@ -45,7 +45,7 @@ nav a:hover {
 
 main {
     display: grid;
-    grid-template-rows: 100px auto;
+    grid-template-rows: 50px auto;
     grid-template-columns: 2fr 1fr;
     gap: 1rem; 
     max-width: 800px;
@@ -55,5 +55,38 @@ main {
 h1 {
     grid-column: 1 / 4;
     text-align: center;
-    padding: 20px 0;
+    padding: 12px 0 0 0;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: #1a4971;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.card p {
+    padding: 20px;
+    font-size: 15px;
+}
+
+.card img {
+  float: right;
+  max-width: 130px;
+  height: auto;
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+
+.card h3 {
+    margin: 0;
+    text-align: center;
+    padding-right: 200px;
 }
