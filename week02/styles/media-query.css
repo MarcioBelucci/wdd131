@@ -17,10 +17,6 @@ header, main, footer {
     background-color: rgba(0, 60, 255, 0.7);
 }
 
-header {
-
-}
-
 main {
     display: grid;
     grid-template-columns: 1fr;
@@ -30,8 +26,4 @@ main {
 section {
     padding: 1rem;
     background-color: #fff;
-}
-
-footer {
-
 }
