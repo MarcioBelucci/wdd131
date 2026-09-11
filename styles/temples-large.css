@@ -1,10 +1,11 @@
-@media (min-width: 768px) {
-   .hamburger-btn {
+@media (min-width: 800px) {
+   #menu {
     display: none;
   }
 
   nav ul {
     display: flex;
+    flex-direction: row;
   }
 
   main {
