@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+   .hamburger-btn {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  main {
+    max-width: 1000px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
