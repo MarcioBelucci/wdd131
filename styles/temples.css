@@ -80,7 +80,7 @@ main {
 }
 
 h1 {
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
     text-align: center;
     padding-bottom: 10px;
 }
