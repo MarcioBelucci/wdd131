@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+:root {
+    --main-color: black;
+}
+
+body {
+    margin: 0 auto;
+}
+
+header {
+    display: block;
+    text-align: center;
+    background-color: #1a4971;
+    font-size: 20px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.hero {
+    margin: 20px;
+    text-align: center;
+}
+picture {
+    width: auto;
+    height: auto;
+}
+
+.content {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto 24px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.content dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 12px; 
+  column-gap: 16px; 
+  align-items: center;
+}
+
+.content dt {
+  font-weight: bold;
+  text-align: right;
+  color: #333;
+}
+
+.content dd {
+  margin: 0; 
+  text-align: left; 
+  color: #555;
+}
+
+.reverse-content {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto 24px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.reverse-content h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.reverse-content dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 12px; 
+  column-gap: 16px; 
+  align-items: center;
+}
+
+.reverse-content dt {
+  font-weight: bold;
+  text-align: right;
+  color: #333;
+}
+
+.reverse-content dd {
+  margin: 0; 
+  text-align: left; 
+  color: #555;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #1a4971;
+    font-size: 1.2rem;
+    padding: 1rem;
+    color: white;
+}
+
+#lastModified {
+    color: yellow;
+}
