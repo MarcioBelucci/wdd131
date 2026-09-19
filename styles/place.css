@@ -2,39 +2,41 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-    font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 :root {
-    --main-color: black;
+  --main-color: black;
 }
 
 body {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 header {
-    display: block;
-    text-align: center;
-    background-color: #1a4971;
-    font-size: 20px;
-    padding: 15px;
-    margin: 0 auto;
+  display: block;
+  text-align: center;
+  background-color: #006F28;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  margin: 0 auto;
 }
 
 main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 0;
+  max-width: 800px;
+  margin: 0 auto;
+  border-top: 20px solid #FFDF00;
+  border-bottom: 20px solid #FFDF00;
 }
 
 .hero {
-    margin: 20px;
-    text-align: center;
+  margin: 10px 20px;
+  text-align: center;
 }
 picture {
-    width: auto;
-    height: auto;
+  width: auto;
+  height: auto;
 }
 
 .content {
@@ -46,10 +48,11 @@ picture {
   text-align: center;
 }
 
-.content h2 {
+.content h2, .reverse-content h2{
   font-size: 24px;
   margin-top: 0;
   margin-bottom: 24px;
+  color: black;
 }
 
 .content dl {
@@ -81,10 +84,9 @@ picture {
   text-align: center;
 }
 
-.reverse-content h2 {
-  font-size: 24px;
-  margin-top: 0;
-  margin-bottom: 24px;
+.reverse-content img {
+  width: 100px;
+  height: 100px;
 }
 
 .reverse-content dl {
@@ -108,17 +110,13 @@ picture {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #1a4971;
-    font-size: 1.2rem;
-    padding: 1rem;
-    color: white;
-}
-
-#lastModified {
-    color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #006F28;
+  font-size: 1.2rem;
+  padding: 1rem;
+  color: white;
 }
