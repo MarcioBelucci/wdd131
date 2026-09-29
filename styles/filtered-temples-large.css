@@ -1,0 +1,18 @@
+@media (min-width: 800px) {
+   #menu {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main {
+    max-width: 1000px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}

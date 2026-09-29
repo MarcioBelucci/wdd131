@@ -75,20 +75,60 @@ const temples = [
     dedicated: "2000, April, 30",
     area: 35500,
     imageUrl:
-    "https://churchofjesuschristtemples.org/cochabamba-bolivia-temple/photographs/#Gallery-11"
-  }
+    "https://churchofjesuschristtemples.org/assets/img/temples/cochabamba-bolivia-temple/cochabamba-bolivia-temple-13685.jpg"
+  },
   {
     templeName: "Santa Cruz Bolivia",
     location: "Santa Cruz, Bolivia",
     dedicated: "Not dedicated yet",
     area: 29000,
-    imageUrl: "https://churchofjesuschristtemples.org/santa-cruz-bolivia-temple/photographs/#Construction-3"
-  }
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/santa-cruz-bolivia-temple/santa-cruz-bolivia-temple-74714.jpg"
+  },
   {
     templeName: "Campinas Brazil",
     location: "Campinas, Brazil",
     dedicated: "2002, May, 17",
     area: 48100,
-    imageUrl: "https://churchofjesuschristtemples.org/campinas-brazil-temple/photographs/#Official-6"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/campinas-brazil-temple/campinas-brazil-temple-5206.jpg"
   }
 ];
+
+function createTempleCard() {
+  document.querySelector("#temple-card").innerHTML = "";
+  temples.forEach((temple) => { 
+    let card = document.createElement("section");
+    let name = document.createElement("h2");
+    let location = document.createElement("p");
+    let dedicated = document.createElement("p");
+    let area = document.createElement("p");
+    let image = document.createElement("img");
+
+    name.innerHTML = temple.templeName;
+    location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+    dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+    area.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
+    image.setAttribute("src", temple.imageUrl);
+    image.setAttribute("alt", `${temple.templeName} Temple`);
+    image.setAttribute("loading", "lazy");
+
+    card.appendChild(name);
+    card.appendChild(location);
+    card.appendChild(dedicated);
+    card.appendChild(area);
+    card.appendChild(image);
+
+    document.querySelector("#temple-card").appendChild(card);
+  });
+}
+
+createTempleCard(temples);
+
+const oldLink = document.querySelector("#old");
+
+oldLink.addEventListener("click", () => {
+  const oldTemples = temples.filter(temple => {
+    const dedicatedYear = new Date(temple.dedicated).getFullYear();
+    return dedicatedYear < 2000;
+  });
+  createTempleCard(oldTemples);
+});
