@@ -8,8 +8,9 @@ const hambButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
 hambButton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    hambButton.classList.toggle('open');
+    const isOpen = navigation.classList.toggle('open');
+    hambButton.classList.toggle('open', isOpen);
+    hambButton.setAttribute("aria-expanded", isOpen);
 })
 
 const temples = [
@@ -93,42 +94,106 @@ const temples = [
   }
 ];
 
-function createTempleCard() {
-  document.querySelector("#temple-card").innerHTML = "";
-  temples.forEach((temple) => { 
-    let card = document.createElement("section");
-    let name = document.createElement("h2");
-    let location = document.createElement("p");
-    let dedicated = document.createElement("p");
-    let area = document.createElement("p");
-    let image = document.createElement("img");
+function createTempleCard(templeList) {
+  const templeCards = document.querySelector("#temple-card");
+  templeCards.innerHTML = "";
+  templeList.forEach((temple) => {
+    const card = document.createElement("section");
+    const name = document.createElement("h2");
+    const templeInfo = document.createElement("div");
+    const image = document.createElement("img");
 
-    name.innerHTML = temple.templeName;
-    location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-    dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-    area.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
+    name.textContent = temple.templeName;
+    templeInfo.classList.add("temple-info");
+
+    const dedicationPending = temple.dedicated === "Not dedicated yet";
+    const dedicatedDate = dedicationPending
+      ? temple.dedicated
+      : new Date(temple.dedicated.replace(
+        /^(\d{4}),\s*([^,]+),\s*(\d+)$/,
+        "$2 $3, $1"
+      )).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      }      );
+
+      templeInfo.append(
+        createTempleInfo("Location", temple.location),
+        createTempleInfo(
+          "Dedicated",
+          dedicatedDate,
+          dedicationPending ? "dedication-status" : ""
+        ),
+        createTempleInfo("Area", `${temple.area.toLocaleString("en-US")} sq ft`)
+      );
+
     image.setAttribute("src", temple.imageUrl);
     image.setAttribute("alt", `${temple.templeName} Temple`);
     image.setAttribute("loading", "lazy");
 
     card.appendChild(name);
-    card.appendChild(location);
-    card.appendChild(dedicated);
-    card.appendChild(area);
+    card.appendChild(templeInfo);
     card.appendChild(image);
 
-    document.querySelector("#temple-card").appendChild(card);
+    templeCards.appendChild(card);
   });
+}
+
+function createTempleInfo(label, value, valueClass = "") {
+  const paragraph = document.createElement("p");
+  const labelElement = document.createElement("strong");
+  const valueElement = document.createElement("span");
+
+  labelElement.classList.add("label");
+  labelElement.textContent = `${label}:`;
+
+  valueElement.classList.add("value");
+  if (valueClass) {
+    valueElement.classList.add(valueClass);
+  }
+  valueElement.textContent = value;
+
+  paragraph.append(labelElement, " ", valueElement);
+  return paragraph;
 }
 
 createTempleCard(temples);
 
-const oldLink = document.querySelector("#old");
+function showTemples(event, templeList) {
+  event.preventDefault();
+  createTempleCard(templeList);
+  navigation.classList.remove("open");
+  hambButton.classList.remove("open");
+  hambButton.setAttribute("aria-expanded", "false");
+}
 
-oldLink.addEventListener("click", () => {
+document.querySelector("#home").addEventListener("click", event => {
+  showTemples(event, temples);
+});
+
+document.querySelector("#old").addEventListener("click", event => {
   const oldTemples = temples.filter(temple => {
-    const dedicatedYear = new Date(temple.dedicated).getFullYear();
-    return dedicatedYear < 2000;
+    const dedicatedYear = Number(temple.dedicated.split(",")[0]);
+    return dedicatedYear < 1900;
   });
-  createTempleCard(oldTemples);
+  showTemples(event, oldTemples);
+});
+
+document.querySelector("#new").addEventListener("click", event => {
+  const newTemples = temples.filter(temple => {
+    const dedicatedYear = Number(temple.dedicated.split(",")[0]);
+    return dedicatedYear > 2000;
+  });
+  showTemples(event, newTemples);
+});
+
+document.querySelector("#large").addEventListener("click", event => {
+  const largeTemples = temples.filter(temple => temple.area > 90000);
+  showTemples(event, largeTemples);
+});
+
+document.querySelector("#small").addEventListener("click", event => {
+  const smallTemples = temples.filter(temple => temple.area < 10000);
+  showTemples(event, smallTemples);
 });
