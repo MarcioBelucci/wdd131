@@ -1,0 +1,9 @@
+@media (min-width: 700px) {
+  main {
+    padding: 2rem 1rem 4rem;
+  }
+
+  section {
+    padding: 1.75rem 2rem;
+  }
+}
