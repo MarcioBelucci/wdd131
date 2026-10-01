@@ -43,25 +43,43 @@ a:focus {
 }
 
 .site-header {
-  background-color: var(--color-primary);
-  color: #ffffff;
-  padding: 1.5rem 1rem;
-  text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin: 0 auto;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
 }
 
 .site-header h1 {
-  color: #ffffff;
-  margin: 0.5rem 0 0.25rem;
+    color: #ffffff;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: start;
+    padding-top: 20px;
 }
 
 .site-header .tagline {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #d7e3ec;
+    margin: 0;
+    font-size: 0.95rem;
+    color: #d7e3ec;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    justify-self: center;
 }
 
 .logo-mark {
-  color: #ffffff;
+    padding-right: 180px;  
+    justify-self: end;
+}
+.logo-mark img {
+    grid-column: 1 / 2;
+    height: 150px;
+    width: 150px;
+    border-radius: 500%;
+    background-color: #ffffff;  
 }
 
 main {
