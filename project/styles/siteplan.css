@@ -1,15 +1,9 @@
-/* ===========================================
-   Piracicaba Lures Anglers — Site Plan styles
-   Color schema and typography defined in
-   sections 4 and 5 are applied here.
-=========================================== */
-
 :root {
-  --color-primary: #0B3D5C;   /* Deep River Blue */
-  --color-secondary: #4F7B52; /* Reed Green */
-  --color-bg: #F4EFE6;        /* Sand */
-  --color-text: #232323;      /* Charcoal */
-  --color-accent: #E8793C;    /* Lure Orange */
+  --color-primary: #0B3D5C;   
+  --color-secondary: #4F7B52; 
+  --color-bg: #F4EFE6;        
+  --color-text: #232323;     
+  --color-accent: #E8793C;    
 
   --font-heading: 'Oswald', sans-serif;
   --font-body: 'Lato', sans-serif;

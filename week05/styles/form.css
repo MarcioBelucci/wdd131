@@ -1,0 +1,133 @@
+:root {
+  --color-primary: #0B3D5C;   
+  --color-secondary: #fff; 
+  --color-bg: #dbdbdb;        
+  --color-text: black;     
+  --color-accent: yellow;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+main{
+    margin: 0 auto;
+    max-width: 800px;
+
+}
+
+#review-form {
+    background-color: var(--color-bg);
+    margin: 1.5rem auto;
+    padding: 1.5rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 1rem;    
+    border: none;          
+    padding: 0;
+}
+
+.form-group label, 
+.form-group legend {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.form-group input[type="submit"] {
+    display: block;            
+    width: 100%;               
+    max-width: 300px;          
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 24px;     
+    font-size: 16px;         
+    font-weight: bold;
+    cursor: pointer;            
+    border-radius: 5px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;      
+    justify-content: space-around; 
+    align-items: flex-end;
+    max-width: 400px;             
+    margin-top: 0.5rem;
+}
+
+.star-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+}
+
+.star-item label {
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 4px;    
+}
+
+.star-item input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--color-primary);
+    font-size: 1.2rem;
+    padding: 1rem;
+    color: var(--color-secondary);
+}
+
+#lastModified {
+    color: var(--color-accent);
+}
+
+main.review-confirmation { 
+    display: flex; 
+    flex-direction: column;
+    text-align: center; 
+    padding: 2rem; 
+} 
+
+#reviewCount { 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    color: #0056b3; 
+}
