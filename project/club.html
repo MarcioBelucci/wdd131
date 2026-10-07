@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club &amp; Events | Piracicaba Lures Anglers</title>
+  <meta name="description" content="Upcoming events from Piracicaba Lures Anglers and a membership sign-up form.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="images/logo.webp" alt="Piracicaba Lures Anglers logo" width="56" height="56">
+        <span>Piracicaba Lures Anglers</span>
+      </div>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="species.html">Species</a></li>
+          <li><a href="lures.html">Lures &amp; Techniques</a></li>
+          <li><a href="club.html" aria-current="page">Club &amp; Events</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h1>Club &amp; Events</h1>
+      <p>Join fellow anglers at our upcoming events, and sign up to become a club member.</p>
+    </section>
+
+    <p id="welcome-banner" hidden></p>
+
+    <section aria-labelledby="events-heading">
+      <h2 id="events-heading">Upcoming Events</h2>
+      <div class="events-list" id="events-list"></div>
+    </section>
+
+    <section aria-labelledby="signup-heading">
+      <h2 id="signup-heading">Become a Member</h2>
+      <form class="signup-form" id="signup-form" novalidate>
+
+        <div class="form-field">
+          <label for="member-name">Full name</label>
+          <input type="text" id="member-name" name="member-name" required minlength="2" autocomplete="name">
+        </div>
+
+        <div class="form-field">
+          <label for="member-email">Email address</label>
+          <input type="email" id="member-email" name="member-email" required autocomplete="email">
+        </div>
+
+        <div class="form-field">
+          <label for="interest">Main interest</label>
+          <select id="interest" name="interest" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="river fishing">River fishing</option>
+            <option value="pond fishing">Pond / fee-fishing</option>
+            <option value="fly fishing">Fly fishing</option>
+            <option value="tournaments">Tournament fishing</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="experience">Years of fishing experience</label>
+          <input type="number" id="experience" name="experience" min="0" max="80" required>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Anything you'd like us to know? (optional)</label>
+          <textarea id="message" name="message" rows="3"></textarea>
+          <span class="form-hint">For example, your availability or a specific event you want to join.</span>
+        </div>
+
+        <button type="submit" class="btn">Sign up</button>
+      </form>
+
+      <p id="form-confirmation" role="status" hidden></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Piracicaba Lures Anglers &mdash; a fictional club created for an academic project (WDD 131, BYU-Idaho).</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/club-page.js"></script>
+</body>
+</html>

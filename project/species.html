@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Species Guide | Piracicaba Lures Anglers</title>
+  <meta name="description" content="A guide to freshwater fish species found around Piracicaba, with filters by habitat and difficulty, and a favorites list.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="images/logo.webp" alt="Piracicaba Lures Anglers logo" width="56" height="56">
+        <span>Piracicaba Lures Anglers</span>
+      </div>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="species.html" aria-current="page">Species</a></li>
+          <li><a href="lures.html">Lures &amp; Techniques</a></li>
+          <li><a href="club.html">Club &amp; Events</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h1>Species Guide</h1>
+      <p>
+        Freshwater species found in the rivers and fee-fishing ponds around Piracicaba. Filter by
+        habitat or difficulty, and save your favorites &mdash; they'll be remembered on this device.
+      </p>
+    </section>
+
+    <form class="filters" aria-label="Filter species">
+      <div class="filter-group">
+        <label for="habitat-filter">Habitat</label>
+        <select id="habitat-filter">
+          <option value="all">All habitats</option>
+          <option value="river">River</option>
+          <option value="pond">Pond / Reservoir</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="difficulty-filter">Difficulty</label>
+        <select id="difficulty-filter">
+          <option value="all">All levels</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="filter-group checkbox">
+        <input type="checkbox" id="favorites-only">
+        <label for="favorites-only">Favorites only</label>
+      </div>
+    </form>
+
+    <div class="species-grid" id="species-grid"></div>
+    <p id="empty-message" hidden>No species match these filters yet. Try adjusting them.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Piracicaba Lures Anglers &mdash; a fictional club created for an academic project (WDD 131, BYU-Idaho).</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/species-page.js"></script>
+</body>
+</html>

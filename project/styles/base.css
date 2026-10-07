@@ -1,0 +1,212 @@
+/* ===========================================
+   base.css
+   Shared reset, variables, typography and
+   navigation for Piracicaba Lures Anglers.
+=========================================== */
+
+:root {
+  --color-primary: #0B3D5C;   /* Deep River Blue */
+  --color-secondary: #4F7B52; /* Reed Green */
+  --color-bg: #F4EFE6;        /* Sand */
+  --color-text: #232323;      /* Charcoal */
+  --color-accent: #E8793C;    /* Lure Orange */
+  --color-surface: #ffffff;
+
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Header / Navigation ---------- */
+
+.site-header {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand img {
+  width: 56px;
+  height: 56px;
+}
+
+.brand span {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-size: 1.3rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a[aria-current="page"] {
+  color: var(--color-accent);
+}
+
+@media (max-width: 680px) {
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .main-nav {
+    width: 100%;
+    display: none;
+  }
+
+  .main-nav.is-open {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0.75rem;
+  }
+
+  .main-nav li {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 0.75rem 0.25rem;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+  }
+}
+
+/* ---------- Layout helpers ---------- */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.page-intro {
+  max-width: 65ch;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #cf631f;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.site-footer a {
+  color: #d7e3ec;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: var(--color-accent);
+}

@@ -1,0 +1,255 @@
+/* ===========================================
+   styles.css
+   Page-specific layout: hero, cards, filters,
+   forms and events.
+=========================================== */
+
+/* ---------- Hero (home page) ---------- */
+
+.hero {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  max-width: 50ch;
+  margin: 0 auto 1.5rem;
+}
+
+/* ---------- Highlights grid (home page) ---------- */
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.highlight-card {
+  background-color: var(--color-surface);
+  border-radius: 6px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-card h3 {
+  margin-top: 0;
+}
+
+/* ---------- Filters ---------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  background-color: var(--color-surface);
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.filter-group.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+select,
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #c6cdd1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: var(--color-text);
+}
+
+/* ---------- Species grid / cards ---------- */
+
+.species-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.species-card {
+  background-color: var(--color-surface);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.species-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.scientific-name {
+  font-style: italic;
+  color: #5a6b73;
+  margin-top: -0.4rem;
+}
+
+.card-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.card-meta li {
+  margin-bottom: 0.25rem;
+}
+
+.favorite-btn {
+  margin-top: 0.75rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.favorite-btn[aria-pressed="true"] {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+#empty-message {
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+  color: #5a6b73;
+}
+
+/* ---------- Lure guide (lures page) ---------- */
+
+.lure-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.lure-item {
+  background-color: var(--color-surface);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.lure-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+@media (max-width: 480px) {
+  .lure-item {
+    grid-template-columns: 1fr;
+  }
+
+  .lure-item img {
+    width: 100%;
+    height: 140px;
+  }
+}
+
+/* ---------- Club page: events + form ---------- */
+
+.events-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.event-card {
+  background-color: var(--color-surface);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 6px;
+  padding: 1.1rem 1.3rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.event-date {
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0.2rem 0 0.6rem;
+}
+
+#welcome-banner {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  padding: 0.9rem 1.25rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.signup-form {
+  background-color: var(--color-surface);
+  border-radius: 6px;
+  padding: 1.5rem;
+  max-width: 540px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.1rem;
+}
+
+.form-field label {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+
+.form-hint {
+  font-size: 0.8rem;
+  color: #5a6b73;
+}
+
+#form-confirmation {
+  margin-top: 1rem;
+  background-color: #e4efe5;
+  border: 1px solid var(--color-secondary);
+  color: #2f4a31;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+}
