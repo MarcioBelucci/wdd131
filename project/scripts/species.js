@@ -30,7 +30,7 @@ export const species = [
   },
   {
     id: 3,
-    name: "Tucunaré Amarelo",
+    name: "Tucunaré",
     scientificName: "Cichla kelberi",
     habitat: "both",
     difficulty: "medium",
@@ -48,7 +48,7 @@ export const species = [
     difficulty: "hard",
     bestLures: ["Foam pellet imitation", "Small topwater plug"],
     season: "Summer and hot Spring days",
-    image: "images/species/tambacu.webp",
+    image: "images/species/tambaqui.webp",
     description:
       "Famous for fighting deep and testing tackle to its limit because of its size and strength, this species is a staple of fee-fishing ponds. Lure anglers use floating pellet imitations to trigger visual surface strikes."
   },
