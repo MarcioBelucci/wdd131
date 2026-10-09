@@ -133,7 +133,7 @@ textarea {
   margin-top: 0.75rem;
   background-color: var(--color-bg);
   border: 1px solid var(--color-accent);
-  color: var(--color-accent);
+  color: var(--color-accent2);
   font-family: var(--font-heading);
   padding: 0.45rem 0.9rem;
   border-radius: 6px;
@@ -141,7 +141,7 @@ textarea {
 }
 
 .favorite-btn[aria-pressed="true"] {
-  background-color: var(--color-accent);
+  background-color: var(--color-accent2);
   color: #ffffff;
 }
 

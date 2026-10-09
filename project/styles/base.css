@@ -9,7 +9,8 @@
   --color-secondary: #4F7B52; /* Reed Green */
   --color-bg: #F4EFE6;        /* Sand */
   --color-text: #232323;      /* Charcoal */
-  --color-accent: #E8793C;    /* Lure Orange */
+  --color-accent: #ff8544;    /* Lure Orange */
+  --color-accent2: #9b3600;   
   --color-surface: #ffffff;
 
   --font-heading: 'Oswald', sans-serif;
@@ -177,7 +178,7 @@ main {
 
 .btn {
   display: inline-block;
-  background-color: var(--color-accent);
+  background-color: var(--color-accent2);
   color: #ffffff;
   font-family: var(--font-heading);
   padding: 0.6rem 1.4rem;
@@ -202,7 +203,7 @@ main {
   color: #ffffff;
   text-align: center;
   padding: 1.5rem 1rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .site-footer a {
