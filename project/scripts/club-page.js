@@ -23,6 +23,7 @@ function formatDate(isoDate) {
 function buildEventCard(event) {
   return `
     <article class="event-card">
+      <img src="${event.image}" alt="${event.name}" loading="lazy" width="320" height="180">
       <h3>${event.name}</h3>
       <p class="event-date">${formatDate(event.date)} &middot; ${event.location}</p>
       <p>${event.description}</p>
